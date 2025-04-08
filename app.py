@@ -18,10 +18,10 @@ def extract_features_from_url(url):
     num_special_chars = len(re.findall(r'[^\w\s]', url))
     num_digits = sum(c.isdigit() for c in url)
     subdomain_count = hostname.count('.') - 1 if hostname else 0
-    domain_age = -1  # Placeholder
-    web_traffic = 0  # Placeholder
-    page_rank = 0    # Placeholder
-    google_index = 1 if "google" in url else 0  # Crude guess
+    domain_age = -1 
+    web_traffic = 0  
+    page_rank = 0    
+    google_index = 1 if "google" in url else 0  
 
     # Create a DataFrame with extracted features
     features = pd.DataFrame([[
